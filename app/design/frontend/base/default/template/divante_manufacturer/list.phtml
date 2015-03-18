@@ -1,0 +1,9 @@
+<? /* @var $this Divante_Manufacturer_Block_List */ ?>
+<?
+$manufacturers = $this->getManufacturers();
+?>
+<ul>
+<? foreach($manufacturers as $manufacturer): ?>
+    <li><a href="<?= $this->getManufacturerUrl($manufacturer); ?> "><?= $manufacturer->getLabel(); ?></a></li>
+<? endforeach ?>
+</ul>

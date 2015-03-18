@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <divante_manufacturer_index_index>
+        <reference name="content">
+            <block type="divante_manufacturer/list" name="manufacurers_list" template="divante_manufacturer/list.phtml"/>
+        </reference>
+    </divante_manufacturer_index_index>
+
+    <divante_manufacturer_index_manufacturer>
+        <reference name="left">
+            <block type="divante_manufacturer/navigation" name="catalog.leftnav" before="-" template="catalog/navigation/left.phtml"/>
+            <block type="divante_manufacturer/layer_view" name="catalog.leftnav_layer" after="catalog.leftnav" template="catalog/layer/view.phtml"/>
+        </reference>
+
+        <reference name="content">
+            <block type="divante_manufacturer/description" name="manufacturer_description" template="divante_manufacturer/description.phtml"/>
+            <block type="divante_manufacturer/product_list" name="product_list" template="catalog/product/list.phtml">
+                <block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
+                    <block type="page/html_pager" name="product_list_toolbar_pager"/>
+                </block>
+                <action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
+            </block>
+        </reference>
+    </divante_manufacturer_index_manufacturer>
+</layout>

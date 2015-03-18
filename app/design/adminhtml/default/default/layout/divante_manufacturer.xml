@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<layout>
+    <adminhtml_manufacturer_index>
+        <reference name="content">
+            <block type="divante_manufacturer/adminhtml_manufacturer" name="manufacturer_grid_container"/>
+        </reference>
+    </adminhtml_manufacturer_index>
+
+    <adminhtml_manufacturer_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="divante_manufacturer/adminhtml_manufacturer_grid" name="manufacturer_grid"/>
+        </block>
+    </adminhtml_manufacturer_grid>
+
+    <adminhtml_manufacturer_edit>
+        <reference name="left">
+            <block type="adminhtml/store_switcher" name="store_switcher" template="store/switcher.phtml" />
+        </reference>
+        <reference name="content">
+            <block type="divante_manufacturer/adminhtml_manufacturer_edit" name="manufacturer_form_container"/>
+        </reference>
+    </adminhtml_manufacturer_edit>
+</layout>

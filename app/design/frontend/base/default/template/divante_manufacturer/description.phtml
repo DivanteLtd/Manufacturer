@@ -1,0 +1,11 @@
+<? /** @var Divante_Manufacturer_Block_Description $this */ ?>
+<? if($this->showBlock()): ?>
+    <div class="manufacturer-info">
+        <table style="width: 100%">
+            <tr>
+                <td class="manufacturer-logo"><img src="<?= $this->getLogoUrl() ?>" title="<?= $this->getManufacturer()->getLabel(); ?>" alt="<?= $this->getManufacturer()->getLabel() ?>" /></td>
+                <td class="manufacturer-description"><?= $this->getDescription(); ?></td>
+            </tr>
+        </table>
+    </div>
+<? endif; ?>

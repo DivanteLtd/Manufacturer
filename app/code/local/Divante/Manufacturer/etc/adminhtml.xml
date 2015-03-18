@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <catalog>
+            <children>
+                <attributes>
+                    <children>
+                        <divante_manufacturer translate="title" module="divante_manufacturer">
+                            <title>Producenci</title>
+                            <sort_order>200</sort_order>
+                            <action>adminhtml/manufacturer/index</action>
+                        </divante_manufacturer>
+                    </children>
+                </attributes>
+            </children>
+        </catalog>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <divante_manufacturer translate="title" module="divante_manufacturer">
+                                        <title>Tech Data Section</title>
+                                        <sort_order>0</sort_order>
+                                    </divante_manufacturer>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <catalog>
+                        <children>
+                            <attributes>
+                                <children>
+                                    <divante_manufacturer translate="title" module="divante_manufacturer">
+                                        <title>Producenci</title>
+                                        <sort_order>30</sort_order>
+                                    </divante_manufacturer>
+                                </children>
+                            </attributes>
+                        </children>
+                    </catalog>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
